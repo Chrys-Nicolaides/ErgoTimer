@@ -1,1 +1,1 @@
-# Ergotimer
+# ErgoTimer
