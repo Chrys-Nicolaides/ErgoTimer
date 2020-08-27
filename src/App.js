@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
+import CalculateTimeLeft from "./components/CalculateTimeLeft";
 
 function App() {
   return (
     <div className="App">
-      <img src="tenor.gif" />
+      <CalculateTimeLeft />
+      Hello Cam
     </div>
   );
 }
