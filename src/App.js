@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <CalculateTimeLeft />
-      Hello Cam
+      Start the timer Cam!
     </div>
   );
 }
