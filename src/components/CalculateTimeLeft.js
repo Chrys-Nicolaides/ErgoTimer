@@ -18,6 +18,10 @@ const CalculateTimeLeft = () => {
   }, []);
 
   useEffect(() => {
+    main();
+  }, [secondsCounter]);
+
+  let main = () => {
     if (isRunning === true) {
       if (timer.stand > 0) {
         setTimeToSit(false);
@@ -33,7 +37,7 @@ const CalculateTimeLeft = () => {
     } else if (timer.stand === 0 && timer.sit === 0) {
       setTitle("Start the Timer!");
     }
-  }, [secondsCounter]);
+  };
 
   let resetTime = () => {
     setTimer({
@@ -71,8 +75,10 @@ const CalculateTimeLeft = () => {
       <h2>{title}</h2>
       <CountDown />
       <div className="buttons">
-        {MyTimers.map((item) => (
-          <button onClick={() => setTimer(item)}>{item.name}</button>
+        {MyTimers.map((item, index) => (
+          <button key={index} onClick={() => setTimer(item)}>
+            {item.name}
+          </button>
         ))}
       </div>
 
