@@ -1,11 +1,65 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App > div {
-  margin-bottom: 20px;
+.App {
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(#8dd0ff, #5c6dab);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
 }
 
 button {
-  margin-top: 40px;
+  outline: none;
+  border: 0;
+  width: 130px;
+  height: 36px;
+  border-radius: 36px;
+  font-weight: 500;
+  margin: 20px 5px;
+  background-color: transparent;
+  color: white;
+  padding: 0 20px;
+  border: 1.5px solid #fff;
+}
+
+.buttons {
+  margin: auto;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.resetButton {
+  color: #5c6dab;
+  background-color: white;
+  font-weight: 600;
+  border: 0;
+}
+
+.startButton {
+  background-color: #5c6dab;
+  color: white;
+  font-weight: 600;
+  border: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 64px;
+  padding-top: 35px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
