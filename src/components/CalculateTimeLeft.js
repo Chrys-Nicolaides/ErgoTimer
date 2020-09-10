@@ -25,11 +25,11 @@ const CalculateTimeLeft = () => {
     if (isRunning === true) {
       if (timer.stand > 0) {
         setTimeToSit(false);
-        setTitle("Stand");
+        setTitle("Stand!");
         setTimer({ ...timer, stand: timer.stand - 1 });
       } else if (timer.sit > 0) {
         setTimeToSit(true);
-        setTitle("Sit");
+        setTitle("Sit!");
         setTimer({ ...timer, sit: timer.sit - 1 });
       } else {
         setTitle("Time is up!");
@@ -46,7 +46,6 @@ const CalculateTimeLeft = () => {
       name: "",
     });
     setIsRunning(false);
-    setTitle("Take a break Cam!");
   };
 
   const CountDown = () => {
@@ -76,7 +75,13 @@ const CalculateTimeLeft = () => {
       <CountDown />
       <div className="buttons">
         {MyTimers.map((item, index) => (
-          <button key={index} onClick={() => setTimer(item)}>
+          <button
+            key={index}
+            onClick={() => {
+              setTimer(item);
+              setIsRunning(false);
+            }}
+          >
             {item.name}
           </button>
         ))}
