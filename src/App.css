@@ -4,13 +4,24 @@
   padding: 0;
 }
 
+:root {
+  --theme-background: #3a3a3a;
+  --theme-gradient: #5d70ad;
+  --theme-text: white;
+}
+
 .App {
   text-align: center;
   color: white;
-  background-image: linear-gradient(#8dd0ff, #5c6dab);
+  /* background-color: var(--theme-color); */
+  /* background-image: linear-gradient(#8dd0ff, #5c6dab); */
+  background-image: linear-gradient(
+    var(--theme-gradient),
+    var(--theme-background)
+  );
   min-width: 100%;
-  min-height: 100%;
-  padding-top: 40px;
+  min-height: 100vh;
+  /* padding-top: 10px; */
 }
 
 button {
@@ -70,17 +81,23 @@ h3 {
 }
 
 .LightTheme > a > .ThemeIconToggle {
-  fill: black;
+  fill: white;
 }
 
 .DarkTheme {
   display: flex;
   justify-content: flex-end;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  padding-top: 1rem;
 }
 
 .LightTheme {
   display: flex;
   justify-content: flex-end;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  padding-top: 1rem;
+}
+
+.ThemeHeader {
+  padding-bottom: 20px;
 }
