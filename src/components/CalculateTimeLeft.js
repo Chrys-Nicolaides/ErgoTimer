@@ -70,7 +70,7 @@ const CalculateTimeLeft = () => {
 
   return (
     <div>
-      <h1>ErgoTimer</h1>
+      <h1>ERGOTIMER</h1>
       <h2>{title}</h2>
       <CountDown />
       <div className="buttons">
