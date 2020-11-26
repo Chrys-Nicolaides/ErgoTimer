@@ -33,6 +33,8 @@ const ThemeToggle = () => {
             <div className="DarkTheme">
               <Link to="/light" activeClassName="IsActive" exact={true}>
                 <ThemeIconToggle
+                  // width="300"
+                  // height="300"
                   alt="Theme Toggle"
                   className="ThemeIconToggle"
                   onClick={() =>
@@ -46,6 +48,8 @@ const ThemeToggle = () => {
             <div className="LightTheme">
               <Link to="/dark" activeClassName="IsActive" exact={true}>
                 <ThemeIconToggle
+                  // width="300"
+                  // height="300"
                   alt="Theme Toggle"
                   className="ThemeIconToggle"
                   onClick={() =>

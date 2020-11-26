@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  overflow-y: hidden;
 }
 
 :root {
@@ -13,15 +15,11 @@
 .App {
   text-align: center;
   color: white;
-  /* background-color: var(--theme-color); */
-  /* background-image: linear-gradient(#8dd0ff, #5c6dab); */
   background-image: linear-gradient(
     var(--theme-gradient),
     var(--theme-background)
   );
-  min-width: 100%;
   min-height: 100vh;
-  /* padding-top: 10px; */
 }
 
 button {
@@ -36,6 +34,7 @@ button {
   color: white;
   padding: 0 20px;
   border: 1.5px solid #fff;
+  cursor: pointer;
 }
 
 .buttons {
@@ -45,11 +44,22 @@ button {
   justify-content: center;
 }
 
+button:hover {
+  border: 3px solid white;
+}
+
 .resetButton {
   color: #5c6dab;
   background-color: white;
   font-weight: 600;
-  border: 0;
+}
+
+.resetButton:hover {
+  border: 1.8px solid #5c6dab;
+}
+
+.resetButton:active {
+  background-color: #b3c3ff;
 }
 
 .startButton {
@@ -57,6 +67,14 @@ button {
   color: white;
   font-weight: 600;
   border: 0;
+}
+
+.startButton:hover {
+  border: 1.8px solid white;
+}
+
+.startButton:active {
+  background-color: #465588;
 }
 
 h1 {
@@ -100,4 +118,45 @@ h3 {
 
 .ThemeHeader {
   padding-bottom: 20px;
+}
+
+.ThemeIconToggle {
+  /* width: 100%;
+  height: 40px; */
+  background-size: 50px 50px;
+}
+
+svg {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.first-wave {
+  z-index: 3;
+}
+.second-wave {
+  z-index: 2;
+}
+.third-wave {
+  z-index: 1;
+}
+
+.first-wave-line {
+  z-index: 4;
+}
+
+.second-wave-line {
+  z-index: 5;
+}
+
+.third-wave-line {
+  z-index: 6;
+}
+
+.wave-lines {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  min-width: 100%;
 }
