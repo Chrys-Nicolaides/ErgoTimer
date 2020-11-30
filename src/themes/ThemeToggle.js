@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LightTheme from "./LightTheme";
 import DarkTheme from "./DarkTheme";
 import { ReactComponent as ThemeIconToggle } from "../images/ThemeIconToggle.svg";
+import { ReactComponent as MoonToggleIcon } from "../images/MoonToggleIcon.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const ThemeToggle = () => {
@@ -32,11 +33,9 @@ const ThemeToggle = () => {
           <Route path="/dark">
             <div className="DarkTheme">
               <Link to="/light" activeClassName="IsActive" exact={true}>
-                <ThemeIconToggle
-                  // width="300"
-                  // height="300"
+                <MoonToggleIcon
                   alt="Theme Toggle"
-                  className="ThemeIconToggle"
+                  className="SunIconToggle"
                   onClick={() =>
                     handleColourChange("#5D70AD", "#8BCDFC", "white")
                   }
@@ -48,10 +47,8 @@ const ThemeToggle = () => {
             <div className="LightTheme">
               <Link to="/dark" activeClassName="IsActive" exact={true}>
                 <ThemeIconToggle
-                  // width="300"
-                  // height="300"
                   alt="Theme Toggle"
-                  className="ThemeIconToggle"
+                  className="MoonIconToggle"
                   onClick={() =>
                     handleColourChange("black", "#5D70AD", "white")
                   }
