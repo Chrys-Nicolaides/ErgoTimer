@@ -2,14 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 :root {
   --theme-background: #3a3a3a;
   --theme-gradient: #5d70ad;
   --theme-text: white;
+  --app-background: #b8d8f3;
 }
 
 .App {
@@ -94,11 +94,11 @@ h3 {
   margin-bottom: 30px;
 }
 
-.DarkTheme > a > .ThemeIconToggle {
+.DarkTheme > a > .SunIconToggle {
   fill: white;
 }
 
-.LightTheme > a > .ThemeIconToggle {
+.LightTheme > a > .MoonIconToggle {
   fill: white;
 }
 
@@ -120,44 +120,37 @@ h3 {
   padding-bottom: 20px;
 }
 
-.ThemeIconToggle {
-  /* width: 100%;
-  height: 40px; */
-  background-size: 50px 50px;
-}
+/* Wave animation */
 
-svg {
+.wave-one {
+  width: 1550px;
+  height: 1500px;
   position: absolute;
-  display: flex;
-  justify-content: flex-start;
+  top: -210%;
+  left: -10%;
+  border-radius: 40%;
+  background: var(--app-background);
+  animation: wave 6s infinite linear;
+  opacity: 30%;
 }
 
-.first-wave {
-  z-index: 3;
-}
-.second-wave {
-  z-index: 2;
-}
-.third-wave {
-  z-index: 1;
-}
-
-.first-wave-line {
-  z-index: 4;
-}
-
-.second-wave-line {
-  z-index: 5;
-}
-
-.third-wave-line {
-  z-index: 6;
-}
-
-.wave-lines {
+.wave-two {
+  width: 1550px;
+  height: 1500px;
   position: absolute;
-  display: flex;
-  align-items: flex-end;
-  min-width: 100%;
-  z-index: 1;
+  top: -210%;
+  left: -10%;
+  border-radius: 41%;
+  background: var(--app-background);
+  opacity: 18%;
+  animation: wave 4.5s infinite linear;
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
