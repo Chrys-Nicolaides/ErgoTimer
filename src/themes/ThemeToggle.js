@@ -50,7 +50,7 @@ const ThemeToggle = () => {
                   alt="Theme Toggle"
                   className="MoonIconToggle"
                   onClick={() =>
-                    handleColourChange("black", "#5D70AD", "white")
+                    handleColourChange("#5E72AE", "#3A3A3A", "white")
                   }
                 />
               </Link>

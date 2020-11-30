@@ -20,6 +20,11 @@
     var(--theme-background)
   );
   min-height: 100vh;
+  min-width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -35,7 +40,6 @@ button {
   padding: 0 20px;
   border: 1.5px solid #fff;
   cursor: pointer;
-  /* font-size: 14px; */
 }
 
 .buttons {
@@ -144,11 +148,11 @@ h3 {
 /* Wave animation */
 
 .wave-one {
-  width: 1600px;
-  height: 1500px;
+  width: 100vw;
+  height: 100vw;
   position: absolute;
-  top: -220%;
-  left: -10%;
+  top: -85vw;
+  left: 0;
   background: var(--app-background);
   border-radius: 40%;
   animation: wave 6s infinite linear;
@@ -156,12 +160,12 @@ h3 {
 }
 
 .wave-two {
-  width: 1600px;
-  height: 1500px;
+  width: 100vw;
+  height: 100vw;
   position: absolute;
-  top: -215%;
-  left: -10%;
-  border-radius: 41%;
+  top: -85vw;
+  left: 0;
+  border-radius: 42%;
   background: var(--app-background);
   opacity: 20%;
   animation: wave 4.5s infinite linear;
