@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const ThemeToggle = () => {
   const [themeColor, setThemeColor] = useState({
-    background: "#5D70AD",
-    gradient: "#8BCDFC",
+    background: "#54669E",
+    gradient: "#7DB1E4",
     text: "white",
   });
 

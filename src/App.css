@@ -7,7 +7,7 @@
 
 :root {
   --theme-background: #3a3a3a;
-  --theme-gradient: #5d70ad;
+  --theme-gradient: #5e72ae;
   --theme-text: white;
   --app-background: #b8d8f3;
 }
@@ -25,7 +25,7 @@
 button {
   outline: none;
   border: 0;
-  width: 130px;
+  width: 96px;
   height: 36px;
   border-radius: 36px;
   font-weight: 500;
@@ -35,6 +35,7 @@ button {
   padding: 0 20px;
   border: 1.5px solid #fff;
   cursor: pointer;
+  /* font-size: 14px; */
 }
 
 .buttons {
@@ -45,25 +46,29 @@ button {
 }
 
 button:hover {
-  border: 3px solid white;
+  border: 2.5px solid white;
+}
+
+button:active {
+  background: rgba(198, 215, 236, 0.25);
 }
 
 .resetButton {
-  color: #5c6dab;
+  color: #4b5888;
   background-color: white;
   font-weight: 600;
 }
 
 .resetButton:hover {
-  border: 1.8px solid #5c6dab;
+  border: 1.8px solid #313c63;
 }
 
 .resetButton:active {
-  background-color: #b3c3ff;
+  background: rgba(198, 215, 236, 0.99);
 }
 
 .startButton {
-  background-color: #5c6dab;
+  background-color: #4b5888;
   color: white;
   font-weight: 600;
   border: 0;
@@ -74,17 +79,20 @@ button:hover {
 }
 
 .startButton:active {
-  background-color: #465588;
+  background-color: #3a4877;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 500;
   padding-bottom: 5px;
+  color: #729cd2;
+  z-index: 1000;
 }
 
 h2 {
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 h3 {
@@ -120,29 +128,42 @@ h3 {
   padding-bottom: 20px;
 }
 
+.app-title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.timer-logo {
+  margin-right: 4px;
+  margin-left: 5px;
+  align-self: baseline;
+  z-index: 1000;
+}
+
 /* Wave animation */
 
 .wave-one {
-  width: 1550px;
+  width: 1600px;
   height: 1500px;
   position: absolute;
-  top: -210%;
+  top: -220%;
   left: -10%;
-  border-radius: 40%;
   background: var(--app-background);
+  border-radius: 40%;
   animation: wave 6s infinite linear;
-  opacity: 30%;
+  opacity: 35%;
 }
 
 .wave-two {
-  width: 1550px;
+  width: 1600px;
   height: 1500px;
   position: absolute;
-  top: -210%;
+  top: -215%;
   left: -10%;
   border-radius: 41%;
   background: var(--app-background);
-  opacity: 18%;
+  opacity: 20%;
   animation: wave 4.5s infinite linear;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MyTimers from "./MyTimers";
+import { ReactComponent as TimerLogo } from "../images/timer-logo.svg";
 
 const CalculateTimeLeft = () => {
   const [title, setTitle] = useState("Let the Countdown begin!");
@@ -70,7 +71,11 @@ const CalculateTimeLeft = () => {
 
   return (
     <div>
-      <h1>ERGOTIMER</h1>
+      <div className="app-title-logo">
+        <h1>ERG</h1>
+        <TimerLogo className="timer-logo" />
+        <h1>TIMER</h1>
+      </div>
       <h2>{title}</h2>
       <CountDown />
       <div className="buttons">
@@ -92,7 +97,7 @@ const CalculateTimeLeft = () => {
           className="startButton"
           onClick={() => setIsRunning(!isRunning)}
         >
-          {!isRunning ? "Start timer" : "Pause timer"}
+          {!isRunning ? "Start" : "Pause"}
         </button>
         <button className="resetButton" onClick={resetTime}>
           Reset
