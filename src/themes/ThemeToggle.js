@@ -31,26 +31,26 @@ const ThemeToggle = () => {
       <div className="themes">
         <Switch>
           <Route path="/dark">
-            <div className="DarkTheme">
+            <div className="DarkTheme themeButton">
               <Link to="/light" activeClassName="IsActive" exact={true}>
                 <MoonToggleIcon
                   alt="Theme Toggle"
                   className="SunIconToggle"
                   onClick={() =>
-                    handleColourChange("#5D70AD", "#8BCDFC", "white")
+                    handleColourChange("#5D70AD", "#8BCDFC", "#475569")
                   }
                 />{" "}
               </Link>
             </div>
           </Route>
           <Route path="/">
-            <div className="LightTheme">
+            <div className="LightTheme themeButton">
               <Link to="/dark" activeClassName="IsActive" exact={true}>
                 <ThemeIconToggle
                   alt="Theme Toggle"
                   className="MoonIconToggle"
                   onClick={() =>
-                    handleColourChange("#5E72AE", "#3A3A3A", "white")
+                    handleColourChange("#5E72AE", "#3A3A3A", "#475569")
                   }
                 />
               </Link>
