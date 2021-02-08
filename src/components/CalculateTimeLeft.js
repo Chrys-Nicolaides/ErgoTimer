@@ -71,13 +71,12 @@ const CalculateTimeLeft = () => {
 
   return (
     <div>
-      <div className="app-title-logo">
-        <h1>ERG</h1>
+      {/* <div className="app-title-logo">
+        <h1 className="bold-header">ERG</h1>
         <TimerLogo className="timer-logo" />
-        <h1>TIMER</h1>
-      </div>
+        <h1 className="regular-header">TIMER</h1>
+      </div> */}
       <h2>{title}</h2>
-      <CountDown />
       <div className="buttons">
         {MyTimers.map((item, index) => (
           <button
@@ -90,6 +89,9 @@ const CalculateTimeLeft = () => {
             {item.name}
           </button>
         ))}
+      </div>
+      <div className="countdown-container">
+        <CountDown />
       </div>
 
       <div className="buttons">

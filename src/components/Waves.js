@@ -3,9 +3,14 @@ import React from "react";
 const Waves = () => {
   return (
     <div>
-      <div class="water-waves">
-        <div class="wave-one"></div>
-        <div class="wave-two"></div>
+      <div className="water-waves">
+        <div className="wave-one"></div>
+        <div className="wave-two"></div>
+      </div>
+      <div className="wave-lines">
+        <div className="lightWaveLine"></div>
+        <div className="midWaveLine"></div>
+        <div className="darkWaveLine"></div>
       </div>
     </div>
   );
