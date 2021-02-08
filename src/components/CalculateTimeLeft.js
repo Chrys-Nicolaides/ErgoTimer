@@ -14,7 +14,7 @@ const CalculateTimeLeft = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => setSecondsCounter(new Date()), 1000);
+    const interval = setInterval(() => setSecondsCounter(new Date()), 100000);
     return () => clearInterval(interval);
   }, []);
 
@@ -57,25 +57,46 @@ const CalculateTimeLeft = () => {
       timers = timer.stand;
     }
 
-    return <h3>{formatter(timers)}</h3>;
+    return (
+      <TimeDisplay
+        hours={formatter(timers).hours}
+        minutes={formatter(timers).minutes}
+      />
+    );
   };
 
   const formatter = (input) => {
-    let hours = Math.floor(input / 60);
+    let hours;
+    if (Math.floor(input / 60) > 10) {
+      hours = Math.floor(input / 60);
+    } else hours = `0${Math.floor(input / 60)}`;
     let minutes = input % 60;
     if (minutes < 10) {
       minutes = "0" + minutes;
     }
-    return `${hours}:${minutes}`;
+    return { hours: hours, minutes: minutes };
+  };
+
+  const TimeDisplay = (props) => {
+    return (
+      <div className="countdown-container">
+        <div className="content">
+          <div>
+            <h3 className="time-container">{props.hours}</h3>
+            <h5>hours</h5>
+          </div>
+          <h3>:</h3>
+          <div>
+            <h3 className="time-container">{props.minutes}</h3>
+            <h5>minutes</h5>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
     <div>
-      {/* <div className="app-title-logo">
-        <h1 className="bold-header">ERG</h1>
-        <TimerLogo className="timer-logo" />
-        <h1 className="regular-header">TIMER</h1>
-      </div> */}
       <h2>{title}</h2>
       <div className="buttons">
         {MyTimers.map((item, index) => (
@@ -90,10 +111,7 @@ const CalculateTimeLeft = () => {
           </button>
         ))}
       </div>
-      <div className="countdown-container">
-        <CountDown />
-      </div>
-
+      <CountDown />
       <div className="buttons">
         <button
           className="startButton"

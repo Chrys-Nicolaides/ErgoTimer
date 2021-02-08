@@ -29,12 +29,7 @@
     var(--theme-background-two),
     var(--theme-background-one)
   );
-  /* background-image: radial-gradient(
-    at bottom right,
-    #8f7cc2,
-    #b0d7f5,
-    #e9acdb
-  ); */
+
   min-height: 100vh;
   min-width: 100vw;
   position: fixed;
@@ -44,29 +39,28 @@
   align-items: center;
   height: 100%;
   position: absolute;
+  z-index: -2;
 }
 
 button {
   outline: none;
   border: 0;
-  width: 96px;
+  width: 90px;
   height: 36px;
   border-radius: 12px;
-  /* font-size: 24px; */
   font-family: "Source Sans Pro";
   font-weight: 700;
-  margin: 20px 5px;
-  background-color: transparent;
+  margin: 40px 15px 0px;
+  background-color: white;
   color: #475569;
-  padding: 0 20px;
   border: 2px solid #475569;
   cursor: pointer;
 }
 
 .buttons {
   margin: auto;
-  margin-top: 24px;
-  margin-bottom: 50px;
+  margin-top: 4px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
@@ -76,16 +70,16 @@ button:hover {
 }
 
 button:active {
-  background-color: hsla(215, 19%, 35%, 0.15);
+  background-color: #c9c7dc;
 }
 
 .resetButton {
   color: #475569;
   background-color: white;
   font-weight: 700;
-  width: 146px;
+  width: 136px;
   height: 46px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .resetButton:hover {
@@ -93,7 +87,7 @@ button:active {
 }
 
 .resetButton:active {
-  background-color: hsla(215, 19%, 35%, 0.15);
+  background-color: #c9c7dc;
 }
 
 .startButton {
@@ -101,9 +95,9 @@ button:active {
   color: white;
   border: none;
   font-weight: 700;
-  width: 146px;
+  width: 136px;
   height: 46px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .startButton:hover {
@@ -117,14 +111,14 @@ button:active {
 }
 
 .regular-header {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 300;
   padding-bottom: 5px;
   z-index: 1000;
   top: 70px;
 }
 .bold-header {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 600;
   padding-bottom: 5px;
   z-index: 1000;
@@ -138,10 +132,17 @@ h2 {
 
 h3 {
   font-size: 100px;
-  padding-top: 35px;
   font-weight: 700;
-  margin-bottom: 30px;
   color: white;
+  text-align: center;
+  z-index: 5000;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 2px;
 }
 
 .DarkTheme > a > .SunIconToggle {
@@ -167,18 +168,16 @@ h3 {
   display: flex;
   justify-content: flex-end;
   margin-right: 3rem;
-  padding-top: 1rem;
 }
 
 .LightTheme {
   display: flex;
   justify-content: flex-end;
   margin-right: 3rem;
-  padding-top: 1rem;
 }
 
 .ThemeHeader {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .app-title-logo {
@@ -191,20 +190,10 @@ h3 {
 }
 
 .timer-logo {
-  margin-right: 4px;
-  margin-left: 5px;
+  margin-left: 1px;
   align-self: baseline;
   z-index: 1000;
 }
-
-/* .wave-lines {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100vw;
-  height: 100%;
-  z-index: 7000;
-} */
 
 .container {
   width: 85vw;
@@ -213,34 +202,51 @@ h3 {
   background-color: hsla(249, 62%, 96%, 0.3);
   border-radius: 30px;
   z-index: 200;
-  /* opacity: 25%; */
 }
 
-/* .countdown-container {
-  height: 160px;
-  width: 200px;
-  background-image: linear-gradient(to bottom right, #e290f8, #a0a1f6);
+.countdown-container {
   display: flex;
   justify-content: center;
-  padding: 10px;
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
- */
 
-.lightWaveLine,
-.midWaveLine,
-.darkWaveLine {
+.time-container {
+  height: 160px;
+  width: 200px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom right,
+    hsla(253, 25%, 74%, 0.65),
+    hsla(255, 25%, 60%, 0.7)
+  );
+  padding: 14px 0 0 0;
+  z-index: 5000;
+}
+
+.white-blur {
+  border-radius: 55%;
+  background-color: hsla(0, 0%, 100%, 0.5);
   position: absolute;
-  top: 95vw;
-  width: 200vw;
-  height: 200vw;
-  left: -50vw;
-  z-index: 7000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 100px;
-  /* box-sizing: border-box; */
-  /* overflow: visible; */
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > h3 {
+  padding: 10px 10px;
+  height: 160px;
+  margin-bottom: 30px;
 }
 
 /* Wave animation */
