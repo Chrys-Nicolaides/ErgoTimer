@@ -21,7 +21,9 @@ function App() {
           <div className="container">
             <ThemeToggle />
             <CalculateTimeLeft />
-            <Waves />
+            <div className="white-blur">""</div>
+
+            {/* <Waves /> */}
             {/* <waveLines /> */}
           </div>
         </div>
