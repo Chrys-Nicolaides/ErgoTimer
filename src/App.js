@@ -23,7 +23,7 @@ function App() {
             <CalculateTimeLeft />
             <div className="white-blur">""</div>
 
-            {/* <Waves /> */}
+            <Waves />
             {/* <waveLines /> */}
           </div>
         </div>
