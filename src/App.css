@@ -51,9 +51,11 @@ button {
   font-family: "Source Sans Pro";
   font-weight: 700;
   margin: 40px 15px 0px;
-  background-color: white;
+  /* background-color: white; */
+  background-color: transparent;
+
   color: #475569;
-  border: 2px solid #475569;
+  border: 1.4px solid #475569;
   cursor: pointer;
 }
 
@@ -66,47 +68,50 @@ button {
 }
 
 button:hover {
-  border: 3px solid #475569;
+  border: 2px solid #475569;
 }
 
 button:active {
-  background-color: #c9c7dc;
+  background-color: hsla(0, 0%, 100%, 0.7);
 }
 
 .resetButton {
   color: #475569;
   background-color: white;
+  /* background-color: transparent; */
   font-weight: 700;
   width: 136px;
   height: 46px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .resetButton:hover {
-  border: 3px solid #475569;
+  border: 2px solid #475569;
 }
 
 .resetButton:active {
-  background-color: #c9c7dc;
+  /* background-color: hsla(0, 0%, 100%, 0.5); */
+  background-color: transparent;
 }
 
 .startButton {
-  background-color: #475569;
+  /* background-color: #27272a; */
+  background-color: #1f2937;
   color: white;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
   width: 136px;
   height: 46px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .startButton:hover {
-  background-color: #566881;
+  /* background-color: #5b6e8a; */
   border: none;
 }
 
 .startButton:active {
-  background-color: #3d474b;
+  background-color: #364150;
   border: none;
 }
 
@@ -139,9 +144,9 @@ h3 {
 }
 
 h5 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  color: #475569;
+  color: #4b5563;
   margin-top: 2px;
 }
 
@@ -202,6 +207,7 @@ h5 {
   background-color: hsla(249, 62%, 96%, 0.3);
   border-radius: 30px;
   z-index: 200;
+  box-shadow: 18px 18px 30px 0px hsla(240, 21%, 30%, 0.14);
 }
 
 .countdown-container {
@@ -213,15 +219,16 @@ h5 {
 }
 
 .time-container {
-  height: 160px;
+  height: 140px;
   width: 200px;
   border-radius: 20px;
   background-image: linear-gradient(
     to bottom right,
-    hsla(253, 25%, 74%, 0.65),
-    hsla(255, 25%, 60%, 0.7)
+    hsla(314, 58%, 79%, 0.7),
+    hsla(256, 36%, 62%, 0.7)
   );
-  padding: 14px 0 0 0;
+  /* box-shadow: 10px 10px 30px 0px hsla(240, 21%, 30%, 0.8); */
+  padding: 4px 0 0 0;
   z-index: 5000;
 }
 
@@ -250,7 +257,7 @@ h5 {
 }
 
 /* Wave animation */
-
+/* 
 .wave-one {
   width: 200vw;
   height: 200vw;
@@ -261,7 +268,7 @@ h5 {
   border-radius: 40%;
   animation: wave 14s infinite linear;
   opacity: 10%;
-  z-index: 90;
+  z-index: 1;
 }
 
 .wave-two {
@@ -275,14 +282,14 @@ h5 {
   border-radius: 42%;
   opacity: 85%;
   animation: wave 9s infinite linear;
-  z-index: 100;
-}
+  z-index: 1;
+} */
 
-@keyframes wave {
+/* @keyframes wave {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
