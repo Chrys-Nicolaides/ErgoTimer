@@ -7,24 +7,36 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const ThemeToggle = () => {
   const [themeColor, setThemeColor] = useState({
-    background: "#54669E",
-    gradient: "#7DB1E4",
-    text: "white",
+    pink: "#e9acdb",
+    blue: "#b0d7f5",
+    purple: "#8f7cc2",
+    text: "#374151",
+    textLight: "#6b7280",
   });
 
   let setColor = (object, color) =>
     document.documentElement.style.setProperty(`--${object}`, color);
 
-  let handleColourChange = (backgroundColor, gradientColor, textColor) => {
+  let handleColourChange = (
+    pinkColor,
+    blueColor,
+    purpleColor,
+    textColor,
+    textLightColor
+  ) => {
     setThemeColor({
-      background: backgroundColor,
-      gradient: gradientColor,
+      pink: pinkColor,
+      blue: blueColor,
+      purple: purpleColor,
       text: textColor,
+      textLight: textLightColor,
     });
   };
-  setColor("theme-background", themeColor.background);
-  setColor("theme-gradient", themeColor.gradient);
+  setColor("theme-pink", themeColor.pink);
+  setColor("theme-blue", themeColor.blue);
+  setColor("theme-purple", themeColor.purple);
   setColor("theme-text", themeColor.text);
+  setColor("theme-text-light", themeColor.textLight);
 
   return (
     <Router>
@@ -37,7 +49,13 @@ const ThemeToggle = () => {
                   alt="Theme Toggle"
                   className="SunIconToggle"
                   onClick={() =>
-                    handleColourChange("#5D70AD", "#8BCDFC", "#475569")
+                    handleColourChange(
+                      "#e9acdb",
+                      "#b0d7f5",
+                      "#8f7cc2",
+                      "#374151",
+                      "#6b7280"
+                    )
                   }
                 />{" "}
               </Link>
@@ -50,7 +68,13 @@ const ThemeToggle = () => {
                   alt="Theme Toggle"
                   className="MoonIconToggle"
                   onClick={() =>
-                    handleColourChange("#5E72AE", "#3A3A3A", "#475569")
+                    handleColourChange(
+                      "#B76FA7",
+                      "#5EA5DC",
+                      "#3B296E",
+                      "white",
+                      "white"
+                    )
                   }
                 />
               </Link>
