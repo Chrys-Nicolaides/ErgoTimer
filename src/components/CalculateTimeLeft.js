@@ -14,7 +14,7 @@ const CalculateTimeLeft = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => setSecondsCounter(new Date()), 100000);
+    const interval = setInterval(() => setSecondsCounter(new Date()), 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -81,14 +81,14 @@ const CalculateTimeLeft = () => {
     return (
       <div className="countdown-container">
         <div className="content">
-          <div>
+          <div className="time-display">
             <h3 className="time-container">{props.hours}</h3>
-            <h5>hours</h5>
+            <h5>minutes</h5>
           </div>
           <h3>:</h3>
-          <div>
+          <div className="time-display">
             <h3 className="time-container">{props.minutes}</h3>
-            <h5>minutes</h5>
+            <h5>seconds</h5>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ const CalculateTimeLeft = () => {
   return (
     <div>
       <h2>{title}</h2>
-      <div className="buttons">
+      <div className="time-buttons">
         {MyTimers.map((item, index) => (
           <button
             key={index}
@@ -112,7 +112,7 @@ const CalculateTimeLeft = () => {
         ))}
       </div>
       <CountDown />
-      <div className="buttons">
+      <div className="action-buttons">
         <button
           className="startButton"
           onClick={() => setIsRunning(!isRunning)}
