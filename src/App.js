@@ -14,17 +14,19 @@ function App() {
       <div className="App">
         <div>
           <div className="app-title-logo">
-            <h1 className="bold-header">ERG</h1>
-            <TimerLogo className="timer-logo" />
-            <h1 className="regular-header">TIMER</h1>
+            <div className="app-title">
+              <h1 className="bold-header">ERG</h1>
+              <TimerLogo className="timer-logo" />
+              <h1 className="regular-header">TIMER</h1>
+            </div>
+            <div>
+              <ThemeToggle />
+            </div>
           </div>
           <div className="container">
-            <ThemeToggle />
             <CalculateTimeLeft />
             <div className="white-blur">""</div>
-
             <Waves />
-            {/* <waveLines /> */}
           </div>
         </div>
       </div>
