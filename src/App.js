@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import CalculateTimeLeft from "./components/CalculateTimeLeft";
@@ -9,9 +9,11 @@ import { ReactComponent as TimerLogo } from "./images/timer-logo.svg";
 // import waveLines from "./components/waveLines";
 
 function App() {
+  const [theme, setTheme] = useState("light-theme");
+
   return (
     <div>
-      <div className="App">
+      <div className={`App ${theme}`}>
         <div>
           <div className="app-title-logo">
             <div className="app-title">
@@ -20,12 +22,12 @@ function App() {
               <h1 className="regular-header">TIMER</h1>
             </div>
             <div>
-              <ThemeToggle />
+              <ThemeToggle setTheme={setTheme} />
             </div>
           </div>
           <div className="container">
             <CalculateTimeLeft />
-            <div className="white-blur">""</div>
+            <div className="white-blur"></div>
             <Waves />
           </div>
         </div>
