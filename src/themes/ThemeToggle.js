@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import LightTheme from "./LightTheme";
-// import DarkTheme from "./DarkTheme";
 import { ReactComponent as SunToggleIcon } from "../images/SunToggleIcon.svg";
 import { ReactComponent as MoonToggleIcon } from "../images/MoonToggleIcon.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -12,15 +10,25 @@ const ThemeToggle = (props) => {
     pink: "#e9acdb",
     blue: "#b0d7f5",
     purple: "#8f7cc2",
-    text: "#374151",
-    textLight: "#6b7280",
+    textWhite: "#ffffff",
+    textLight: "#9ca3af",
+    textLightHover: "#d1d5db",
+    textMid: "#6b7280",
+    textDark: "#1f2937",
+    textDarkHover: "#374151",
+    textDarkActive: "#111827",
   };
   const darkColors = {
     pink: "#B76FA7",
     blue: "#5EA5DC",
     purple: "#3B296E",
-    text: "#ffffff",
-    textLight: "#ffffff",
+    textWhite: "#ffffff",
+    textLight: "#9ca3af",
+    textLightHover: "#d1d5db",
+    textMid: "#6b7280",
+    textDark: "#1f2937",
+    textDarkHover: "#374151",
+    textDarkActive: "#111827",
   };
 
   const [themeColor, setThemeColor] = useState(lightColors);
@@ -39,8 +47,13 @@ const ThemeToggle = (props) => {
     setColor("theme-pink", input.pink);
     setColor("theme-blue", input.blue);
     setColor("theme-purple", input.purple);
-    setColor("theme-text", input.text);
+    setColor("theme-text-white", input.textWhite);
     setColor("theme-text-light", input.textLight);
+    setColor("theme-text-light-hover", input.textLightHover);
+    setColor("theme-text-mid", input.textMid);
+    setColor("theme-text-dark", input.textDark);
+    setColor("theme-text-dark-hover", input.textDarkHover);
+    setColor("theme-text-dark-active", input.textDarkActive);
   };
 
   return (
