@@ -6,8 +6,6 @@ import Waves from "./components/Waves";
 import ThemeToggle from "./themes/ThemeToggle";
 import { ReactComponent as TimerLogo } from "./images/timer-logo.svg";
 
-// import waveLines from "./components/waveLines";
-
 function App() {
   const [theme, setTheme] = useState("light-theme");
 
