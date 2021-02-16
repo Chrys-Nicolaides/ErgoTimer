@@ -4,6 +4,7 @@
   padding: 0;
   font-family: "Source Sans Pro";
   text-align: center;
+  transition: background 500ms ease-out, color 800ms ease-out;
 }
 
 :root {
@@ -42,6 +43,35 @@
   overflow: hidden;
 }
 
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 30px;
+  color: var(--theme-text-mid);
+  z-index: 20;
+}
+
+h3 {
+  font-size: 90px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  z-index: 50;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 2px;
+  color: var(--theme-text-mid);
+}
+
+a {
+  grid-column-start: 3;
+  margin-right: 7%;
+  align-items: baseline;
+}
+
 button {
   outline: none;
   border: 0;
@@ -59,14 +89,13 @@ button {
 
 .time-buttons {
   margin: auto;
-  /* margin-top: 4px; */
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
 
 button:hover {
-  border: 2.4px solid var(--theme-text-mid);
+  border: 2.5px solid var(--theme-text-mid);
 }
 
 button:active {
@@ -78,9 +107,9 @@ button:active {
 }
 
 .resetButton {
-  color: var(--theme-text-dark);
-  border: 1.6px solid var(--theme-text-dark);
-  background-color: hsla(0, 0%, 100%, 0.5);
+  color: var(--theme-text-dark-hover);
+  border: 1.6px solid var(--theme-text-dark-hover);
+  background-color: white;
   font-weight: 700;
   width: 136px;
   height: 46px;
@@ -89,7 +118,7 @@ button:active {
 }
 
 .resetButton:hover {
-  border: 2.4px solid var(--theme-text-dark-hover);
+  border: 2.5px solid var(--theme-text-dark-hover);
   color: var(--theme-text-dark-hover);
 }
 
@@ -114,7 +143,7 @@ button:active {
 }
 
 .startButton:active {
-  background-color: var(--theme-text-dark-active);
+  background-color: var(--theme-text-dark);
   border: none;
 }
 
@@ -131,85 +160,31 @@ button:active {
   z-index: 10;
 }
 
-h2 {
-  font-size: 22px;
-  font-weight: 700;
-  /* color: #374151; */
-  padding-top: 30px;
-  color: var(--theme-text-dark);
-  z-index: 20;
-}
-
-h3 {
-  font-size: 90px;
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  z-index: 50;
-}
-
-h5 {
-  font-size: 20px;
-  font-weight: 600;
-  /* color: #6b7280; */
-  margin-top: 2px;
-  color: var(--theme-text-mid);
-}
-
-a {
-  grid-column-start: 3;
-  margin-right: 7%;
-  align-items: baseline;
-}
-
 .SunToggleIcon {
-  fill: white;
+  fill: var(--theme-text-dark-hover);
   width: 26px;
   height: 26px;
   z-index: 30000;
 }
 
 .MoonToggleIcon {
-  fill: white;
+  fill: var(--theme-text-light);
+  stroke-width: 2.5;
   width: 24px;
   height: 24px;
   z-index: 30000;
+  top: -2px;
 }
 
-.dark-theme .container {
-  background-color: hsla(251, 35%, 26%, 0.5);
-}
-
-.dark-theme .time-container {
-  background-color: var(--theme-text-dark);
-  background-image: none;
-}
-
-.dark-theme .white-blur {
-  background-color: hsla(244, 31%, 20%, 0.5);
-}
-
-.dark-theme .startButton {
-  background-color: var(--theme-text-dark-active);
-}
-
-.dark-theme .resetButton {
-  background-color: white;
-  color: var(--theme-text-dark-active);
-  border: 1.6px solid var(--theme-text-dark-active);
-}
-
-.dark-theme button {
-  color: white;
-  border: 1.6px solid white;
-}
-
-.DarkTheme-themeButton,
-.LightTheme-themeButton {
+.toggle-container-light {
+  width: 50px;
+  height: 50px;
+  background-color: hsla(249, 62%, 96%, 0.3);
+  box-shadow: 8px 8px 20px 0px hsla(240, 21%, 30%, 0.2);
+  border-radius: 10px;
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  z-index: 300;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-title {
@@ -229,6 +204,7 @@ a {
 
 .timer-logo {
   margin-left: 1px;
+  margin-right: -1px;
   z-index: 10;
   vertical-align: baseline;
 }
@@ -291,6 +267,110 @@ a {
   padding: 10px 10px;
   height: 160px;
   margin-bottom: 30px;
+}
+
+/* Dark theme */
+
+.dark-theme h2 {
+  color: var(--theme-text-light-hover);
+}
+.dark-theme h3 {
+  color: var(--theme-text-light-hover);
+}
+
+.dark-theme h5 {
+  color: var(--theme-text-light);
+}
+
+.dark-theme button {
+  color: var(--theme-text-light);
+  border: 1.6px solid var(--theme-text-light);
+}
+
+.dark-theme button:hover {
+  border: 2.5px solid var(--theme-text-light);
+}
+
+.dark-theme button:active {
+  border: 2.5px solid var(--theme-text-light-hover);
+  color: var(--theme-text-light-hover);
+  background-color: transparent;
+}
+
+.dark-theme .startButton {
+  background-color: var(--theme-text-dark);
+  color: white;
+  border: none;
+}
+
+.dark-theme .startButton:hover {
+  background-color: var(--theme-text-dark-active);
+  color: white;
+  border: none;
+}
+.dark-theme .startButton:active {
+  background-color: var(--theme-text-dark);
+  color: white;
+  border: none;
+}
+
+.dark-theme .resetButton {
+  background-color: white;
+  color: var(--theme-text-dark);
+  border: 1.6px solid var(--theme-text-dark-active);
+}
+
+.dark-theme .resetButton:hover {
+  color: var(--theme-text-dark);
+  border: 2.5px solid var(--theme-text-dark-active);
+}
+
+.dark-theme .resetButton:active {
+  background-color: var(--theme-text-light);
+  color: var(--theme-text-dark);
+  border: 2.5px solid var(--theme-text-dark-active);
+}
+
+.DarkTheme-themeButton,
+.LightTheme-themeButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 300;
+}
+
+.toggle-container-light:hover,
+.toggle-container-light:active {
+  background-color: hsla(249, 62%, 96%, 0.8);
+}
+
+.dark-theme .time-container {
+  background-color: var(--theme-text-dark);
+  background-image: none;
+}
+
+.dark-theme .white-blur {
+  background-color: hsla(244, 31%, 20%, 0.4);
+}
+
+.dark-theme .container {
+  background-color: hsla(263, 35%, 26%, 0.5);
+}
+
+.toggle-container-dark {
+  width: 50px;
+  height: 50px;
+  background-color: hsla(251, 35%, 26%, 0.5);
+  box-shadow: 8px 8px 20px 0px hsla(240, 21%, 30%, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-container-dark:hover,
+.toggle-container-dark:active {
+  background-color: hsla(251, 35%, 26%, 0.8);
 }
 
 /* Wave animation */
