@@ -12,9 +12,10 @@
   --theme-blue: #b0d7f5;
   --theme-purple: #8f7cc2;
   --theme-text-white: #ffffff;
-  --theme-text-light: #9ca3af;
-  --theme-text-light-hover: #d1d5db;
+  --theme-text-light: #d1d5db;
+  --theme-text-light-hover: #e5e7eb;
   --theme-text-mid: #6b7280;
+  --theme-text-mid-hover: #4b5563;
   --theme-text-dark: #1f2937;
   --theme-text-dark-hover: #374151;
   --theme-text-dark-active: #111827;
@@ -47,7 +48,7 @@ h2 {
   font-size: 22px;
   font-weight: 700;
   padding-top: 30px;
-  color: var(--theme-text-mid);
+  color: var(--theme-text-dark);
   z-index: 20;
 }
 
@@ -82,8 +83,8 @@ button {
   font-weight: 700;
   margin: 20px 10px 0px;
   background-color: transparent;
-  color: var(--theme-text-mid);
-  border: 1.6px solid var(--theme-text-mid);
+  color: var(--theme-text-mid-hover);
+  border: 1.6px solid var(--theme-text-mid-hover);
   cursor: pointer;
 }
 
@@ -410,3 +411,11 @@ button:active {
     transform: rotate(360deg);
   }
 }
+
+/* Responsive Design */
+
+/* @media screen and (min-width: 800px) {
+  .container {
+    margin: 20px;
+  }
+} */
