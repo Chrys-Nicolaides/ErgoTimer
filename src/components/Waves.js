@@ -7,11 +7,6 @@ const Waves = () => {
         <div className="wave-one"></div>
         <div className="wave-two"></div>
       </div>
-      <div className="wave-lines">
-        <div className="lightWaveLine"></div>
-        <div className="midWaveLine"></div>
-        <div className="darkWaveLine"></div>
-      </div>
     </div>
   );
 };
