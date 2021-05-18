@@ -20,17 +20,17 @@ const ThemeToggle = (props) => {
   let setColor = (object, color) =>
     document.documentElement.style.setProperty(`--${object}`, color);
 
-  let handleColourChange = (input) => {
-    if (input === lightColors) {
+  let handleColourChange = (themeColor) => {
+    if (themeColor === lightColors) {
       props.setTheme("light-theme");
-    } else if (input === darkColors) {
+    } else if (themeColor === darkColors) {
       props.setTheme("dark-theme");
     }
-    setThemeColor(input);
+    setThemeColor(themeColor);
 
-    setColor("theme-pink", input.pink);
-    setColor("theme-blue", input.blue);
-    setColor("theme-purple", input.purple);
+    setColor("theme-pink", themeColor.pink);
+    setColor("theme-blue", themeColor.blue);
+    setColor("theme-purple", themeColor.purple);
   };
 
   return (
@@ -45,6 +45,7 @@ const ThemeToggle = (props) => {
                     alt="Theme Toggle"
                     className="MoonToggleIcon"
                     onClick={() => handleColourChange(lightColors)}
+                    themeColor={themeColor}
                   />
                 </div>
               </Link>
@@ -58,6 +59,7 @@ const ThemeToggle = (props) => {
                     alt="Theme Toggle"
                     className="SunToggleIcon"
                     onClick={() => handleColourChange(darkColors)}
+                    themeColor={themeColor}
                   />
                 </div>
               </Link>

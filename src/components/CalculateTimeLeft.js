@@ -17,10 +17,6 @@ const CalculateTimeLeft = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    main();
-  }, [secondsCounter]);
-
   let main = () => {
     if (isRunning === true) {
       if (timer.stand > 0) {
@@ -38,6 +34,11 @@ const CalculateTimeLeft = () => {
       setTitle("Start the Timer!");
     }
   };
+
+  useEffect(() => {
+    main();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secondsCounter]);
 
   let resetTime = () => {
     setTimer({
