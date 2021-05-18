@@ -446,10 +446,10 @@ button:active {
   position: absolute;
   bottom: 540px;
   left: -50vw;
-  background: white;
+  background: hsla(0, 0%, 100%, 0.3);
   border-radius: 44%;
   animation: wave 8s infinite linear;
-  opacity: 10%;
+  /* opacity: 10%; */
   z-index: -1;
 }
 
@@ -459,12 +459,10 @@ button:active {
   position: absolute;
   bottom: 580px;
   left: -50vw;
-  background-color: hsla(0, 1%, 65%, 0.247);
-  mix-blend-mode: multiply;
+  background-color: hsla(0, 1%, 65%, 0.3);
+  /* mix-blend-mode: multiply; */
   border-radius: 42%;
-  opacity: 85%;
-  -moz-opacity: 85%;
-  filter: alpha(opacity=85);
+  /* opacity: 85%; */
   animation: wave 9s infinite linear;
   z-index: -1;
 }
