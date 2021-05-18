@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import MyTimers from "./MyTimers";
-import { ReactComponent as TimerLogo } from "../images/timer-logo.svg";
 
 const CalculateTimeLeft = () => {
   const [title, setTitle] = useState("Let the Countdown begin!");
