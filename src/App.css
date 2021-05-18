@@ -459,10 +459,12 @@ button:active {
   position: absolute;
   bottom: 580px;
   left: -50vw;
-  background: #e5e5e5;
+  background-color: hsla(0, 1%, 65%, 0.247);
   mix-blend-mode: multiply;
   border-radius: 42%;
   opacity: 85%;
+  -moz-opacity: 85%;
+  filter: alpha(opacity=85);
   animation: wave 9s infinite linear;
   z-index: -1;
 }
